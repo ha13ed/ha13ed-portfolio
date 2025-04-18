@@ -7,7 +7,10 @@ export default function AboutSection() {
       radial-gradient(circle at top left, rgba(0,0,0,0.2) 0%, transparent 40%),
       radial-gradient(circle at top right, rgba(0,0,0,0.2) 0%, transparent 40%),
       radial-gradient(circle at bottom left, rgba(0,0,0,0.2) 0%, transparent 40%),
-      radial-gradient(circle at bottom right, rgba(0,0,0,0.2) 0%, transparent 40%)
+      radial-gradient(circle at bottom right, rgba(0,0,0,0.2) 0%, transparent 40%),
+      url("images/1.png"),
+      url("images/2.png"),
+      url("images/3.png")
     `,
     backgroundSize: "auto, auto, auto, auto, 100% 100%, 24px 24px, 24px 24px",
     backgroundPosition: "0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 12px 12px",
@@ -135,7 +138,7 @@ export default function AboutSection() {
             {isLetterTooltipVisible && (
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
                 <img
-                  src="/images/Appreciation_Letter_Thumb.jpg"
+                  src="images/Appreciation_Letter_Thumb.jpg"
                   alt="Appreciation Letter thumbnail"
                   className="w-200 h-auto rounded shadow-med"
                   loading="lazy"
@@ -205,7 +208,7 @@ export default function AboutSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src="/images/Appreciation_Letter_1.jpg"
+              src="images/Appreciation_Letter_1.jpg"
               alt="Letter of Appreciation from the CEO of Iran's Railway"
               className="w-full object-contain"
               loading="lazy"
