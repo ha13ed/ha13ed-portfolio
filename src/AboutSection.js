@@ -108,7 +108,7 @@ export default function AboutSection() {
             {isAbstractTooltipVisible && (
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
                 <img
-                  src={`${BG}/images/Abstract_Thumb.png`}
+                  src={`${BG}/images/Abstract_Thumb.jpg`}
                   alt="Abstract thumbnail"
                   className="w-1/2 h-auto rounded shadow-lg"
                   loading="lazy"
@@ -187,7 +187,7 @@ export default function AboutSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`${BG}/images/Abstract.png`}
+              src={`${BG}/images/Abstract.jpg`}
               alt="Letter of MSC Thesis"
               className="w-full object-contain"
               loading="lazy"
