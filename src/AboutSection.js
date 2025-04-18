@@ -73,7 +73,7 @@ export default function AboutSection() {
   };
 
   return (
-    <div className="min-h-screen py-8 px-8 relative" style={backgroundStyle}>
+    <div className="min-h-auto md:min-h-screen py-8 px-8 relative" style={backgroundStyle}>
       <div style={leftSideStyle} className="px-8 opacity-10 sm:opacity-100">
         <img src={`${BG}/images/1.png`} alt="Vector 1" style={leftImageTopStyle} />
         <img src={`${BG}/images/2.png`} alt="Vector 2" style={imageStyle} />

@@ -17,6 +17,27 @@ export default function ContactSection() {
   };
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const formData = new FormData(e.target);
+    const res = await fetch("https://formspree.io/f/mnnpkqzj", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    setSubmitting(false);
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      const { error } = await res.json();
+      alert(error || "Oops! There was a problem sending your message.");
+    }
+  }
 
   return (
     <div className="bg-[#F7F7F7] py-12 px-4 sm:px-8 relative" style={backgroundStyle}>
@@ -38,12 +59,7 @@ export default function ContactSection() {
             Thanks! Your message has been sent. 🙌
           </p>
         ) : (
-          <form
-            action="https://formspree.io/f/mnnpkqzj"
-            method="POST"
-            className="flex flex-col gap-4 mb-8"
-            onSubmit={() => setSubmitted(true)}
-          >
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 mb-8">
             <input
               type="text"
               name="name"
@@ -67,19 +83,17 @@ export default function ContactSection() {
             />
             <button
               type="submit"
+              disabled={submitting}
               className="bg-[#317FD8] text-white py-3 px-8 rounded-lg font-semibold min-w-[150px] mx-auto shadow-md hover:shadow-lg hover:bg-[#1F6EC3] transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-[#317FD8]"
             >
-              Send Message
+              {submitting ? "Sending…" : "Send Message"}
             </button>
           </form>
         )}
 
         {/* Social / Other Links */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 text-xl">
-          <a
-            href="mailto:your.ha13ed@gmail.com"
-            className="text-[#FF925C] hover:underline font-bold"
-          >
+          <a href="mailto:your.ha13ed@gmail.com" className="text-[#FF925C] hover:underline font-bold">
             Email
           </a>
           <a
@@ -106,12 +120,7 @@ export default function ContactSection() {
           >
             Kaggle
           </a>
-          <a
-            href="https://t.me/ha13ed"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#FF925C] hover:underline font-bold"
-          >
+          <a href="https://t.me/ha13ed" target="_blank" rel="noopener noreferrer" className="text-[#FF925C] hover:underline font-bold">
             Telegram
           </a>
         </div>
