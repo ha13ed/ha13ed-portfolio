@@ -65,7 +65,7 @@ export default function ProjectsSection() {
           <div className="bg-[#F7F7F7] min-h-[210px] rounded-lg shadow-lg overflow-hidden md:flex">
             <div className="md:w-1/4 flex items-center justify-center bg-[#F7F7F7] p-1">
               <img
-                src="/images/MNIST_Thumb.png"
+                src="images/MNIST_Thumb.png"
                 alt="MNIST/Fashion MNIST Model Performance Analysis Thumbnail"
                 className="w-full h-auto object-contain cursor-pointer max-h-48 md:max-h-full"
                 onClick={openMNISTModal}
@@ -123,7 +123,7 @@ export default function ProjectsSection() {
           <div className="bg-[#F7F7F7] min-h-[210px] rounded-lg shadow-lg overflow-hidden md:flex">
             <div className="md:w-1/4 flex items-center justify-center bg-[#F7F7F7] p-1">
               <img
-                src="/images/RainFall_Competition_Thumb.png"
+                src="images/RainFall_Competition_Thumb.png"
                 alt="Mislabeled Time-Series Project Thumbnail"
                 className="w-full h-auto object-contain cursor-pointer max-h-48 md:max-h-full"
                 onClick={openTimeSeriesModal}
@@ -168,7 +168,7 @@ export default function ProjectsSection() {
           <div className="bg-[#F7F7F7] min-h-[210px] rounded-lg shadow-lg overflow-hidden md:flex">
             <div className="md:w-1/4 flex items-center justify-center bg-[#F7F7F7] p-1">
               <img
-                src="/images/Railway_BoxPlot_Thumb.png"
+                src="images/Railway_BoxPlot_Thumb.png"
                 alt="Mislabeled Time-Series Project Thumbnail"
                 className="w-full h-auto object-contain cursor-pointer max-h-48 md:max-h-full"
                 onClick={openRailwaysModal}
@@ -204,7 +204,7 @@ export default function ProjectsSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src="/images/RainFall_Competition.png"
+                src="images/RainFall_Competition.png"
                 alt="Full-sized Mislabeled Time-Series Project"
                 className="w-full object-contain"
               />
@@ -221,7 +221,7 @@ export default function ProjectsSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src="/images/MNIST_Progress.png"
+                src="images/MNIST_Progress.png"
                 alt="Full-sized MNIST/Fashion MNIST Project"
                 className="w-full object-contain"
               />
@@ -238,7 +238,7 @@ export default function ProjectsSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src="/images/Railway_BoxPlot.png"
+                src="images/Railway_BoxPlot.png"
                 alt="Full-sized MNIST/Fashion MNIST Project"
                 className="w-full object-contain"
               />

@@ -72,11 +72,11 @@ export default function AboutSection() {
   return (
     <div className="min-h-screen py-8 px-8 relative" style={backgroundStyle}>
       <div style={leftSideStyle} className="px-8 opacity-10 sm:opacity-100">
-        <img src="/images/1.png" alt="Vector 1" style={leftImageTopStyle} />
-        <img src="/images/2.png" alt="Vector 2" style={imageStyle} />
+        <img src="images/1.png" alt="Vector 1" style={leftImageTopStyle} />
+        <img src="images/2.png" alt="Vector 2" style={imageStyle} />
       </div>
       <div style={rightSideStyle} className="px-8 opacity-10 sm:opacity-100">
-        <img src="/images/3.png" alt="Vector 3" style={imageStyle} />
+        <img src="images/3.png" alt="Vector 3" style={imageStyle} />
       </div>
       <div className="max-w-2xl mx-auto relative z-10">
         {/* About Me Heading */}
@@ -105,7 +105,7 @@ export default function AboutSection() {
             {isAbstractTooltipVisible && (
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
                 <img
-                  src="/images/Abstract_Thumb.png"
+                  src="images/Abstract_Thumb.png"
                   alt="Abstract thumbnail"
                   className="w-1/2 h-auto rounded shadow-lg"
                   loading="lazy"
@@ -184,7 +184,7 @@ export default function AboutSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src="/images/Abstract.png"
+              src="images/Abstract.png"
               alt="Letter of MSC Thesis"
               className="w-full object-contain"
               loading="lazy"
