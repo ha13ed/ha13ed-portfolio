@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 export default function AboutSection() {
+
+  const BG = process.env.PUBLIC_URL;
+
   const backgroundStyle = {
     backgroundColor: "#EAEBEB", // Base background color (bottom-most)
     backgroundImage: `
       radial-gradient(circle at top left, rgba(0,0,0,0.2) 0%, transparent 40%),
       radial-gradient(circle at top right, rgba(0,0,0,0.2) 0%, transparent 40%),
       radial-gradient(circle at bottom left, rgba(0,0,0,0.2) 0%, transparent 40%),
-      radial-gradient(circle at bottom right, rgba(0,0,0,0.2) 0%, transparent 40%),
-      url("images/1.png"),
-      url("images/2.png"),
-      url("images/3.png")
+      radial-gradient(circle at bottom right, rgba(0,0,0,0.2) 0%, transparent 40%)
     `,
     backgroundSize: "auto, auto, auto, auto, 100% 100%, 24px 24px, 24px 24px",
     backgroundPosition: "0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 12px 12px",
@@ -75,11 +75,11 @@ export default function AboutSection() {
   return (
     <div className="min-h-screen py-8 px-8 relative" style={backgroundStyle}>
       <div style={leftSideStyle} className="px-8 opacity-10 sm:opacity-100">
-        <img src="images/1.png" alt="Vector 1" style={leftImageTopStyle} />
-        <img src="images/2.png" alt="Vector 2" style={imageStyle} />
+        <img src={`${BG}/images/1.png`} alt="Vector 1" style={leftImageTopStyle} />
+        <img src={`${BG}/images/2.png`} alt="Vector 2" style={imageStyle} />
       </div>
       <div style={rightSideStyle} className="px-8 opacity-10 sm:opacity-100">
-        <img src="images/3.png" alt="Vector 3" style={imageStyle} />
+        <img src={`${BG}/images/3.png`} alt="Vector 3" style={imageStyle} />
       </div>
       <div className="max-w-2xl mx-auto relative z-10">
         {/* About Me Heading */}
@@ -108,7 +108,7 @@ export default function AboutSection() {
             {isAbstractTooltipVisible && (
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
                 <img
-                  src="images/Abstract_Thumb.png"
+                  src={`${BG}/images/Abstract_Thumb.png`}
                   alt="Abstract thumbnail"
                   className="w-1/2 h-auto rounded shadow-lg"
                   loading="lazy"
@@ -138,7 +138,7 @@ export default function AboutSection() {
             {isLetterTooltipVisible && (
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
                 <img
-                  src="images/Appreciation_Letter_Thumb.jpg"
+                  src={`${BG}/images/Appreciation_Letter_Thumb.jpg`}
                   alt="Appreciation Letter thumbnail"
                   className="w-200 h-auto rounded shadow-med"
                   loading="lazy"
@@ -187,7 +187,7 @@ export default function AboutSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src="images/Abstract.png"
+              src={`${BG}/images/Abstract.png`}
               alt="Letter of MSC Thesis"
               className="w-full object-contain"
               loading="lazy"
@@ -208,7 +208,7 @@ export default function AboutSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src="images/Appreciation_Letter_1.jpg"
+              src={`${BG}/images/Appreciation_Letter_1.jpg`}
               alt="Letter of Appreciation from the CEO of Iran's Railway"
               className="w-full object-contain"
               loading="lazy"
