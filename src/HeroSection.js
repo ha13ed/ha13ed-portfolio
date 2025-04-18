@@ -34,7 +34,7 @@ export default function HeroSection({ onProjectsClick, onContactClick }) {
         </h1>
 
         <h2 className="text-2xl font-semibold text-[#2C2C2C] mb-1">
-          Data Scientist &amp; Kaggle Discussion Master
+          Data Scientist and Kaggle Expert
         </h2>
 
         <p className="text-xl font-bold mb-8">
