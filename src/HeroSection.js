@@ -18,7 +18,7 @@ export default function HeroSection({ onProjectsClick, onContactClick }) {
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center p-8 bg-[#EAEBEB]"
+      className="relative min-h-screen flex items-center justify-center p-6 md:p-8 bg-[#EAEBEB]"
       style={backgroundStyle}
     >
       <div className="relative z-10 max-w-2xl w-full text-center">
