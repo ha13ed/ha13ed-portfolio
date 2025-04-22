@@ -53,7 +53,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <div className="min-h-auto md:min-h-screen py-6 px-8" style={backgroundStyle}>
+    <div className="min-h-auto md:min-h-screen py-8 md:py-12 px-8" style={backgroundStyle}>
       <div className="max-w-3xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-4xl font-bold text-[#FF925C] text-center mb-10">

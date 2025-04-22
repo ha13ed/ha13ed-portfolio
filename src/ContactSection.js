@@ -49,9 +49,9 @@ export default function ContactSection() {
       </div>
 
       <div className="max-w-2xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl font-bold text-[#317FD8] mt-8 mb-6">
+        <h2 className="text-4xl font-bold text-[#FF925C] mt-8 mb-6">
           <span className="[text-shadow:_0_0_1px_#EAEBEB,_0_0_2px_#2c2c2c55]">G</span>
-          <span className="text-[#EAEBEB]">et in Touch</span>
+          <span className="text-[#EAEBEB]">et in Touch</span>          
         </h2>
 
         {submitted ? (
