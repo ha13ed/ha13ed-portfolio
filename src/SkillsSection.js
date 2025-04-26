@@ -12,7 +12,7 @@ export default function SkillsSection() {
     // Data Handling & Analysis
     { name: "Pandas", icon: `${BG}/icons/pandas.svg` },
     { name: "NumPy", icon: `${BG}/icons/numpy.svg` },
-    { name: "Scipy", icon: `${BG}/icons/Scipy.svg` },
+    { name: "Scipy", icon: `${BG}/icons/scipy.svg` },
     { name: "Geopandas", icon: `${BG}/icons/geopandas.svg` }, // Geospatial data handling
 
     // Machine Learning (General)
