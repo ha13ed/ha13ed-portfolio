@@ -5,6 +5,9 @@ export default function ProjectsSection() {
 
   const projectsSectionRef = useRef(null); // Create a ref
 
+  // track first render so we don’t auto-scroll on mount
+  const isFirstPageEffect = useRef(true);
+
   // --- State for Modals ---
   const [isMNISTModalOpen, setIsMNISTModalOpen] = useState(false);
   const openMNISTModal = () => {
@@ -155,12 +158,18 @@ export default function ProjectsSection() {
   useEffect(() => {
     // Check if the ref is attached and if the screen width is mobile (e.g., < 768px for Tailwind's 'md')
     // We also check currentPage > 0 to avoid potential issues, though it starts at 1
-    if (projectsSectionRef.current && currentPage > 0 && window.innerWidth < 768) {
-       // Check if it's not the first page to avoid scrolling down initially if already at top
-       // Or simply scroll every time page changes on mobile
-       // Using block: 'start' tries to align the top of the element with the top of the viewport
-      projectsSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+   // skip scrolling on initial mount
+   if (isFirstPageEffect.current) {
+     isFirstPageEffect.current = false;
+     return;
+   }
+
+
+   // only scroll when moving to pages beyond the first
+   if (currentPage > 1 && projectsSectionRef.current && window.innerWidth < 768) {
+     projectsSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+   }
+
      // Dependency array: This effect runs when currentPage changes
   }, [currentPage]);
 
